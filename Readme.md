@@ -31,7 +31,7 @@ GET /
 ```
 ![image](https://cloud.githubusercontent.com/assets/658544/3076432/04583784-e3dd-11e3-8c30-daa171f3a1da.png)
 
-And the detailed metric json at:
+And get the detailed metric value at this route:
 
 ```
 GET /:name
