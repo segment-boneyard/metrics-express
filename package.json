@@ -1,0 +1,13 @@
+{
+  "name": "metrics-express",
+  "version": "0.0.1",
+  "repository": "git://github.com/segmentio/metrics-express.git",
+  "description": "Metrics serving app for segmentio/metrics",
+  "keywords": [
+    "metrics",
+    "API"
+  ],
+  "dependencies": {
+    "express": "^4.3.1"
+  }
+}
