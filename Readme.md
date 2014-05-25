@@ -19,9 +19,9 @@ var metrics = Metrics()
   .every('1d', awsBilling(accountId, key, secret, bucket, region))
   .every('10m', helpscout('helpscout-key', ['mailbox']));
 
-express() // create your express serve
-  .use('/', serve(metrics)) // mount the subapp
-  .listen(8000);
+express()
+  .use('/', serve(metrics))
+  .listen(7002);
 ```
 
 After your server starts, you'll be able to access a list of your metrics at:
