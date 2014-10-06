@@ -29,7 +29,8 @@ module.exports = function (metrics) {
     var val = metrics.get(name);
     
     if(!val) {
-      res.status(404).send('Failed to find metric "' + name + '"\n');
+      res.status(404).jsonp({ 
+      					error: { message: 'Failed to find metric "' + name + '"'}});
       } else {
       res.jsonp(val);
     }
@@ -46,9 +47,11 @@ module.exports = function (metrics) {
   	var newVal = req.param('newVal');
   	
   	if(!metrics.get(name)){
-      res.status(404).send('Failed to find metric "' + name + '"\n');
+      res.status(404).jsonp({ 
+      					error: { message: 'Failed to find metric "' + name + '"'}});
   	  } else if(isNaN(newVal)){
-  	  	res.status(400).send('Bad value provided! \n');
+  	  	res.status(400).jsonp({ 
+      					error: { message: 'Bad value provided'}});
   	  }else{
   	  	var totalVal = +metrics.get(name) + +newVal;
   	  	var val = metrics.set(name, totalVal);
