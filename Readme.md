@@ -38,6 +38,21 @@ GET /:name
 ```
 ![image](https://cloud.githubusercontent.com/assets/658544/3076433/1e4900ec-e3dd-11e3-8d45-04765e5d67ea.png)
 
+```
+POST /:name/newVal
+```
+Posts values to the server.  For example, let's say your current Monthly Recurring Revenue is $5000. 
+
+When you make a sale, you can add to your current MRR from the terminal using
+
+```js
+
+curl -X POST https://localhost:7002/MRR/10000
+
+```
+
+This will bring your total MRR to $150000
+
 ## License
 
 MIT
