@@ -1,5 +1,6 @@
 
 var express = require('express');
+var timeago = require('timeago');
 
 /**
  * Expose metrics serving app.
@@ -16,7 +17,12 @@ module.exports = function (metrics) {
   });
 
   app.get('/:name', get, function (req, res, next) {
-    res.status(200).jsonp(req.metric.values());
+    var human = {};
+    var values = req.metric.values();
+    Object.keys(values).forEach(function (t) {
+      human[timeago(new Date(parseInt(t)))] = values[t];
+    });
+    res.status(200).jsonp(human);
   });
 
   app.get('/:name/:timestamp', get, function (req, res, next) {

@@ -1,4 +1,8 @@
 
+1.1.0 - January 7, 2014
+-------------------------
+- friendly timeago keys
+
 1.0.1 - January 7, 2014
 -------------------------
 - fixing import issue

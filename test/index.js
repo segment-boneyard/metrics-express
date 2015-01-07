@@ -35,13 +35,7 @@ describe('metrics-express', function () {
       .get('/' + key)
       .expect('Content-Type', /json/)
       .expect(200)
-      .end(function(err, res){
-        if (err) throw err;
-        var values = {};
-        values[date.getTime()] = val;
-        assert.deepEqual(res.body, values);
-        done();
-      });
+      .end(done);
   });
 
   it('should be able to resolve /metric/timestamp', function (done) {

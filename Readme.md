@@ -35,6 +35,8 @@ Fetch a list of all [Metric](https://github.com/segmentio/metrics#new-metric) ke
 
 Get a list of all valid [Metric](https://github.com/segmentio/metrics#new-metric) timestamps and values.
 
+![image](https://cloud.githubusercontent.com/assets/658544/5654566/2eec19ee-9679-11e4-87cf-f0bf48c50874.png)
+
 ```
 GET /:name/:timestamp
 ```
@@ -42,6 +44,8 @@ GET /:name/:timestamp
 Get a [Metric](https://github.com/segmentio/metrics#new-metric) value at a specific `timestamp`.
 
 `timestamp` values could be specific timestamps, or  human [date.js](https://github.com/MatthewMueller/date#examples) strings, like `today` or `2 weeks from wednesday`.
+
+![image](https://cloud.githubusercontent.com/assets/658544/5654588/5561b804-9679-11e4-836f-b8797cb57a16.png)
 
 ## License
 
