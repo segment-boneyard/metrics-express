@@ -1,5 +1,3 @@
-[![Build Status](https://circleci.com/gh/segmentio/metrics-express.png?circle-token=fb2b213544e32fea044429345fff04578af1bca0)](https://circleci.com/gh/segmentio/metrics-express)
-
 # metrics-express
 
 An [express](https://github.com/segmentio/aws-billing) app to serve your [segmentio/metrics](https://github.com/segmentio/metrics) as an internal API.
