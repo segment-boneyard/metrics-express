@@ -1,6 +1,6 @@
 {
   "name": "metrics-express",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "repository": "git://github.com/segmentio/metrics-express.git",
   "description": "Metrics serving app for segmentio/metrics",
   "keywords": [
@@ -9,5 +9,10 @@
   ],
   "dependencies": {
     "express": "^4.3.1"
+  },
+  "devDependencies": {
+    "metrics": "git://github.com/segmentio/metrics",
+    "mocha": "^2.1.0",
+    "supertest": "^0.15.0"
   }
 }

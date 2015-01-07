@@ -26,17 +26,23 @@ express()
 
 After your server starts, you'll be able to access a list of your metrics at:
 
-```
-GET /
-```
+### `GET /`
+
+Fetch a list of all [Metric](https://github.com/segmentio/metrics#new-metric) keys.
+
 ![image](https://cloud.githubusercontent.com/assets/658544/3076432/04583784-e3dd-11e3-8c30-daa171f3a1da.png)
 
-And get the detailed metric value at this route:
+### `GET /:name`
+
+Get a list of all valid [Metric](https://github.com/segmentio/metrics#new-metric) timestamps and values.
 
 ```
-GET /:name
+GET /:name/:timestamp
 ```
-![image](https://cloud.githubusercontent.com/assets/658544/3076433/1e4900ec-e3dd-11e3-8d45-04765e5d67ea.png)
+
+Get a [Metric](https://github.com/segmentio/metrics#new-metric) value at a specific `timestamp`.
+
+`timestamp` values could be specific timestamps, or  human [date.js](https://github.com/MatthewMueller/date#examples) strings, like `today` or `2 weeks from wednesday`.
 
 ## License
 
