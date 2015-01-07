@@ -1,3 +1,4 @@
+[![Build Status](https://circleci.com/gh/segmentio/metrics-express.png?circle-token=fb2b213544e32fea044429345fff04578af1bca0)](https://circleci.com/gh/segmentio/metrics-express)
 
 # metrics-express
 
