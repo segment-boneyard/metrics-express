@@ -1,6 +1,5 @@
 
 var express = require('express');
-var date = require('date.js');
 
 /**
  * Expose metrics serving app.
