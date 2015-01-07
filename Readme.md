@@ -37,9 +37,8 @@ Get a list of all valid [Metric](https://github.com/segmentio/metrics#new-metric
 
 ![image](https://cloud.githubusercontent.com/assets/658544/5654566/2eec19ee-9679-11e4-87cf-f0bf48c50874.png)
 
-```
-GET /:name/:timestamp
-```
+
+### `GET /:name/:timestamp`
 
 Get a [Metric](https://github.com/segmentio/metrics#new-metric) value at a specific `timestamp`.
 
