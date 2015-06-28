@@ -37,7 +37,6 @@ Get a list of all valid [Metric](https://github.com/segmentio/metrics#new-metric
 
 ![image](https://cloud.githubusercontent.com/assets/658544/5654566/2eec19ee-9679-11e4-87cf-f0bf48c50874.png)
 
-
 ### `GET /:name/:timestamp`
 
 Get a [Metric](https://github.com/segmentio/metrics#new-metric) value at a specific `timestamp`.
@@ -45,6 +44,9 @@ Get a [Metric](https://github.com/segmentio/metrics#new-metric) value at a speci
 `timestamp` values could be specific timestamps, or  human [date.js](https://github.com/MatthewMueller/date#examples) strings, like `today` or `2 weeks from wednesday`.
 
 ![image](https://cloud.githubusercontent.com/assets/658544/5654588/5561b804-9679-11e4-836f-b8797cb57a16.png)
+
+### `POST /:name`
+Set a value for a [Metric](https://github.com/segmentio/metrics#new-metric). This will create a new metric if one doesn't exist already. Provide a `value` and an optional `timestamp` in the json request body.
 
 ## License
 
