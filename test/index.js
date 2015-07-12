@@ -61,4 +61,30 @@ describe('metrics-express', function () {
         done();
       });
   });
+
+  it('should be able to create a new metric', function (done) {
+    request(serve(metrics))
+      .post('/foo')
+      .send({ value: '20' })
+      .expect(200)
+      .end(function(err, res){
+        if (err) throw err;
+        metric = metrics.get('foo');
+        assert.equal(metric.latest(), 20);
+        done();
+      });
+  });
+
+  it('should be able to add to an existing metric', function (done) {
+    request(serve(metrics))
+      .post('/' + key)
+      .send({ value: '4' })
+      .expect(200)
+      .end(function(err, res){
+        if (err) throw err;
+        metric = metrics.get(key);
+        assert.equal(metric.latest(), 4);
+        done();
+      });
+  });
 });
